@@ -5,6 +5,5 @@ def factorial_rec(number):
         return 1
     return number * factorial_rec(number - 1)
 
-# Test
 inputNumber = int(input("Enter a number to calculate its factorial: "))
 print(f"{inputNumber}! = {factorial_rec(inputNumber)}")
