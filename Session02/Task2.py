@@ -1,6 +1,5 @@
-s1 = "ab5ff10fc12de3g1go ee20 m 6 j100m"
-s2 = "fahskdnc qfhna h qoi hjkasdnn ah qlkjk"
-
+s1 = "f10h3a f5a65sdks14h f1kj3as1df1 k23ja55sfk6 10jhas2dk3jh2 0f 100 66"
+s2 = " hkjahkj fash ashkjf hash fasshf ashjkfh askjlfhlakhfuihjkweoiqruoewq uoq"
 numbers = []
 current_number = ""
 
@@ -23,6 +22,4 @@ if count > 0:
     print("Sum:", total)
     print("Average:", average)
 else:
-    average = 0
-    print("There is no number in your string")
-
+    print("There are no numbers in your string")
