@@ -25,12 +25,15 @@ class Board:
         return False
 
     def display(self):
-        print("0 1 2 3 4 5 6 7")
+        print("  0 1 2 3 4 5 6 7")
         for row in range(8):
             line = []
             for col in range(8):
                 checker = self.cells[row][col]
-                line.append(checker.symbol() if checker else ".")
+                if checker:
+                    line.append(checker.symbol())
+                else:
+                    line.append(".")
             print(row, " ".join(line))
 
     def legal_moves(self, color):
@@ -75,7 +78,9 @@ class Board:
         checker.col = new_col
 
         if captured:
-            self.cells[(row + new_row) // 2][(col + new_col) // 2] = None
+            mid_row = (row + new_row) // 2
+            mid_col = (col + new_col) // 2
+            self.cells[mid_row][mid_col] = None
 
         if checker.color == "white" and new_row == 0:
             checker.king = True
